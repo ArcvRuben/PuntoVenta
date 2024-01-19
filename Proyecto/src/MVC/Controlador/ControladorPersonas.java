@@ -16,6 +16,8 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 import java.sql.*;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -69,7 +71,8 @@ public class ControladorPersonas {
                 Logger.getLogger(ControladorPersonas.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
-        vista.getBtnEliminar().addActionListener(l -> { int filaSeleccionada = vista.getTablaPersonas().getSelectedRow();
+        vista.getBtnEliminar().addActionListener(l -> {
+            int filaSeleccionada = vista.getTablaPersonas().getSelectedRow();
 
             if (filaSeleccionada == -1) {
                 JOptionPane.showMessageDialog(null, "Por favor, selecciona una fila para eliminar.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -109,14 +112,19 @@ public class ControladorPersonas {
         try {
             URL resourceURL = getClass().getClassLoader().getResource("/Reportes/ReportePersonas.jasper");
             System.out.println("URL del recurso: " + resourceURL);
+            
+            
 
-            JasperReport reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes/Reportecliente.jasper"));
-
+            JasperReport reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes/ReportePersonas.jasper"));
+            
             Conexion con = new Conexion();
-            JasperPrint jp = JasperFillManager.fillReport(
-                    reporte,
-                    null,
-                    con.getCon());
+            Map<String,Object> parametros=new HashMap<String,Object>();
+            
+            parametros.put("titulo","Listado de Clientes");
+            //Hay que sacar parametros seleccionando de un combo o text
+            //Hacemos un Casteo
+            parametros.put("cupo", 100d);
+            JasperPrint jp = JasperFillManager.fillReport(reporte, null, con.getCon());
 
             JasperViewer Jv = new JasperViewer(jp, false);
             Jv.setVisible(true);

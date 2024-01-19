@@ -131,7 +131,7 @@
                               <Component id="jTextField2" min="-2" pref="135" max="-2" attributes="0"/>
                               <Component id="jComboBox1" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
                               <Component id="jSpinner1" alignment="0" min="-2" pref="61" max="-2" attributes="0"/>
-                              <Component id="btnReportePro" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnproductodReporte" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -155,7 +155,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnReportePro" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnproductodReporte" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -427,7 +427,7 @@
             <Property name="text" type="java.lang.String" value="Comprar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnReportePro">
+        <Component class="javax.swing.JButton" name="btnproductodReporte">
           <Properties>
             <Property name="text" type="java.lang.String" value="Imprimir Reporte"/>
           </Properties>

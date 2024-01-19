@@ -16,13 +16,15 @@ public class puntoDeVenta extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-    public JButton getBtnReportePro() {
-        return btnReportePro;
+    public JButton getBtnproductodReporte() {
+        return btnproductodReporte;
     }
 
-    public void setBtnReportePro(JButton btnReportePro) {
-        this.btnReportePro = btnReportePro;
+    public void setBtnproductodReporte(JButton btnproductodReporte) {
+        this.btnproductodReporte = btnproductodReporte;
     }
+
+    
     
 
     /**
@@ -60,9 +62,9 @@ public class puntoDeVenta extends javax.swing.JInternalFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
-        btnReportePro = new javax.swing.JButton();
+        btnproductodReporte = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
@@ -121,7 +123,7 @@ public class puntoDeVenta extends javax.swing.JInternalFrame {
         jButton16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton16.setText("Comprar");
 
-        btnReportePro.setText("Imprimir Reporte");
+        btnproductodReporte.setText("Imprimir Reporte");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -190,7 +192,7 @@ public class puntoDeVenta extends javax.swing.JInternalFrame {
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnReportePro))))
+                            .addComponent(btnproductodReporte))))
                 .addContainerGap(81, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -208,7 +210,7 @@ public class puntoDeVenta extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1)
                             .addComponent(jButton15)
-                            .addComponent(btnReportePro))
+                            .addComponent(btnproductodReporte))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -293,7 +295,7 @@ public class puntoDeVenta extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnReportePro;
+    private javax.swing.JButton btnproductodReporte;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;

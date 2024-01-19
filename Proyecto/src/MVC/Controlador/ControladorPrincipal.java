@@ -38,5 +38,7 @@ public class ControladorPrincipal {
         puntoDeVenta vistap=new puntoDeVenta();
         Vista.getDesktopPrincipal().add(vistap);
         vistap.setVisible(true);
+        ControladorProductos control=new ControladorProductos(vistap);
+        control.iniciarControl2();
     }
 }
