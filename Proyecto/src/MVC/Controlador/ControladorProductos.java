@@ -29,7 +29,6 @@ public class ControladorProductos {
 
     public ControladorProductos(puntoDeVenta vista) {
         this.vista = vista;
-        iniciarControl2();
     }
 
     void iniciarControl2() {

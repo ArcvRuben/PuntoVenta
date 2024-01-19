@@ -110,7 +110,7 @@ public class ControladorPersonas {
 
     public void imprimirpersona() {
         try {
-            URL resourceURL = getClass().getClassLoader().getResource("/Reportes/ReportePersonas.jasper");
+            URL resourceURL = getClass().getClassLoader().getResource("/Reportes/Reportecliente.jasper");
             System.out.println("URL del recurso: " + resourceURL);
             
             
@@ -124,7 +124,7 @@ public class ControladorPersonas {
             //Hay que sacar parametros seleccionando de un combo o text
             //Hacemos un Casteo
             parametros.put("cupo", 100d);
-            JasperPrint jp = JasperFillManager.fillReport(reporte, null, con.getCon());
+            JasperPrint jp = JasperFillManager.fillReport(reporte, parametros, con.getCon());
 
             JasperViewer Jv = new JasperViewer(jp, false);
             Jv.setVisible(true);
